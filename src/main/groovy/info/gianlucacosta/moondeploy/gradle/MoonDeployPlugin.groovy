@@ -30,6 +30,8 @@ class MoonDeployPlugin implements Plugin<Project> {
             maven {
                 url "https://dl.bintray.com/giancosta86/Hephaestus"
             }
+
+            mavenCentral()
         }
 
         project.configurations {
