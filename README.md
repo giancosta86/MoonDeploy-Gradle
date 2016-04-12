@@ -44,7 +44,9 @@ The simplest way to employ the plugin is to:
 What follows is a possible and quite common solution pattern that can be added to the build script of an application (in the example, named *MyApp*) based on the [Gradle application plugin](https://docs.gradle.org/current/userguide/application_plugin.html):
 
 ```groovy
-task createAppDescriptor << {
+task createAppDescriptor {
+    dependsOn(distZip)
+} << {
   ant.moonDeploy(
     //If this URL is on GitHub and ends with /releases/latest, MoonDeploy will
     //automatically retrieve the latest version when the descriptor is run
