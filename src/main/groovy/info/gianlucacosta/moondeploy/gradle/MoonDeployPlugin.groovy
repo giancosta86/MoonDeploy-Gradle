@@ -39,7 +39,7 @@ class MoonDeployPlugin implements Plugin<Project> {
         }
 
         project.dependencies {
-            moonDeployAnt 'info.gianlucacosta.moondeploy:moondeploy-ant:3.0'
+            moonDeployAnt 'info.gianlucacosta.moondeploy:moondeploy-ant:3.1'
             moonDeployAnt 'javax.json:javax.json-api:1.0'
             moonDeployAnt 'org.glassfish:javax.json:1.0.4'
         }

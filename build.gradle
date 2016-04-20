@@ -40,7 +40,7 @@ apply plugin: 'info.gianlucacosta.aurora'
 
 group 'info.gianlucacosta.moondeploy'
 archivesBaseName = 'moondeploy-gradle'
-version '3.0'
+version '3.1'
 
 
 description = 'MoonDeploy - Gradle plugin'
