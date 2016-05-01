@@ -18,5 +18,4 @@
   ===========================================================================
 */
 
-rootProject.name = 'Moondeploy-Gradle'
-
+rootProject.name = 'MoonDeploy-Gradle'
