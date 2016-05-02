@@ -93,9 +93,13 @@ task createAppDescriptor {
 tasks["assemble"].dependsOn("createAppDescriptor")
 ```
 
+Alternatively, you might consider using a dedicated plugin, such as [Aurora](https://github.com/giancosta86/Aurora).
+
 
 ## Further references
 
 * [MoonDeploy](https://github.com/giancosta86/moondeploy)
 
 * [MoonDeploy - Application descriptor format](https://github.com/giancosta86/moondeploy/wiki/App-descriptor:-Version-3)
+
+* [Aurora](https://github.com/giancosta86/Aurora)
