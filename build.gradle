@@ -29,10 +29,11 @@ buildscript {
 
     dependencies {
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
-        classpath 'info.gianlucacosta.moonlicense:moonlicense-gradle:4.1'
-        classpath 'info.gianlucacosta.aurora:aurora:4.1'
+        classpath 'info.gianlucacosta.moonlicense:moonlicense-gradle:4.2'
+        classpath 'info.gianlucacosta.aurora:aurora:5.1'
     }
 }
+
 
 apply plugin: 'groovy'
 apply plugin: 'maven'
@@ -43,12 +44,32 @@ apply plugin: 'info.gianlucacosta.aurora'
 
 group 'info.gianlucacosta.moondeploy'
 archivesBaseName = 'moondeploy-gradle'
-version '3.2'
+version '3.3'
 
 
 description = 'MoonDeploy - Gradle plugin'
 
 ext.facebookPage = "https://www.facebook.com/MoonDeploy"
+
+
+dependencies {
+    generatedCompile localGroovy()
+
+    compile localGroovy()
+
+    compile gradleApi()
+}
+
+
+moonLicense {
+    license = apache2
+
+    productInfo {
+        productName = "MoonDeploy - Gradle"
+        inceptionYear = 2016
+        copyrightHolder = "Gianluca Costa"
+    }
+}
 
 
 aurora {
@@ -66,26 +87,4 @@ aurora {
 
         labels = ['MoonDeploy', 'Gradle', 'plugin', 'descriptors', 'generate', 'automated']
     }
-}
-
-
-moonLicense {
-    license = apache2
-
-    productInfo {
-        productName = "MoonDeploy - Gradle"
-        inceptionYear = 2016
-        copyrightHolder = "Gianluca Costa"
-    }
-}
-
-
-repositories {
-    mavenCentral()
-}
-
-
-dependencies {
-    compile gradleApi()
-    compile localGroovy()
 }

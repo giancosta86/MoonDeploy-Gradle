@@ -25,7 +25,7 @@ buildscript {
     }
 
     dependencies {
-        classpath "info.gianlucacosta.moondeploy:moondeploy-gradle:LATEST_VERSION"
+        classpath "info.gianlucacosta.moondeploy:moondeploy-gradle:CHOOSE_VERSION"
     }
 }
 
